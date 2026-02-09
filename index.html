@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Shopee Clicx - Rekomendasi Fashion, Kuliner & Perlengkapan Rumah</title>
+    <meta name="description" content="Temukan koleksi fashion muslim, batik couple, tas wanita, suplemen kesehatan, hingga perlengkapan rumah tangga terbaik dengan promo menarik di Shopee Clicx.">
+    <meta name="keywords" content="Fashion Muslim, Batik Couple, Tas Wanita, Herbal, Perlengkapan Rumah, Shopee Clicx">
+    <meta name="author" content="Shopee Clicx">
+    
+    <meta property="og:title" content="Shopee Clicx - Lifestyle & Fashion Bio Link">
+    <meta property="og:description" content="Koleksi produk pilihan terbaik untuk gaya hidup modern Anda.">
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiV2Y9s3zqS4sm3rVSKF5FMKMakZN9i5gDsDaLhsLcND9hoe-7BFkAB_-IyM1Brn1pxBA3TCEiH3GVcwQZq1WbInjLr98DO9P2jgpqQznV9DVM9EYP9Ik2WqZtzOl-PcswsyWo2ZOFtyFzmgENahNzouHvno4g2Pc789g5pgGy8FhE2pifI0nh7ezus/s250/6.png">
+    <meta property="og:url" content="https://shopee.clicx.my.id">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-teal: #1a8a9d;
+            --accent-orange: #f7941d;
+            --bg-page: #1a8a9d;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --text-muted: #666666;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header --- */
+        header { 
+            text-align: center; 
+            padding: 40px 0; 
+        }
+        .profile-img { 
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+            border: 5px solid rgba(255,255,255,0.3); 
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .social-icons { margin-top: 15px; }
+        .social-icons a { 
+            color: white; 
+            font-size: 1.8rem; 
+            margin: 0 12px; 
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+        .social-icons a:hover { transform: scale(1.2); }
+        
+        .btn-header {
+            background-color: var(--white);
+            color: var(--primary-teal);
+            text-decoration: none;
+            padding: 12px 25px;
+            font-weight: 700;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        /* --- Section Styling --- */
+        section {
+            background-color: var(--white);
+            border-radius: 30px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .balanced-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .category-title {
+            color: var(--primary-teal);
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
+        }
+
+        .category-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        
+        .category-desc a { color: var(--primary-teal); font-weight: 600; text-decoration: none; }
+
+        /* Tombol & Card */
+        .btn-label {
+            background-color: var(--accent-orange);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            display: block;
+            border-radius: 8px 8px 0 0;
+            text-transform: uppercase;
+        }
+
+        .img-frame {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0 0 8px 8px;
+            background: #f9f9f9;
+        }
+
+        .img-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .img-frame:hover img { transform: scale(1.08); }
+
+        .category-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        .col-right {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Footer Link per Section */
+        .section-footer-link {
+            grid-column: span 2;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-weight: 600;
+        }
+        .section-footer-link a { color: var(--accent-orange); text-decoration: none; }
+
+        footer { text-align: center; color: white; padding: 40px 20px; font-size: 0.85rem; opacity: 0.9; }
+
+        #backToTop {
+            position: fixed; bottom: 30px; right: 30px;
+            background: var(--accent-orange); color: white;
+            border: none; width: 50px; height: 50px; border-radius: 50%;
+            cursor: pointer; display: none; z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        /* --- Responsive Optimization --- */
+        @media (max-width: 768px) {
+            .balanced-grid { grid-template-columns: 1fr; }
+            .section-footer-link { grid-column: span 1; }
+            .category-title { font-size: 1.8rem; text-align: center; }
+            .category-desc { text-align: center; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiV2Y9s3zqS4sm3rVSKF5FMKMakZN9i5gDsDaLhsLcND9hoe-7BFkAB_-IyM1Brn1pxBA3TCEiH3GVcwQZq1WbInjLr98DO9P2jgpqQznV9DVM9EYP9Ik2WqZtzOl-PcswsyWo2ZOFtyFzmgENahNzouHvno4g2Pc789g5pgGy8FhE2pifI0nh7ezus/s250/6.png" alt="Shopee Clicx Logo" class="profile-img">
+            <br>
+            <a href="https://atid.me/0095ot002gfc" class="btn-header" target="_blank">Kunjungi Shopee Clicx <i class="fas fa-external-link-alt"></i></a>
+            
+            <div class="social-icons">
+                <a href="https://web.facebook.com/spring.residence.5/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/kiosq.online" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </header>
+
+        <section>
+            <article class="balanced-grid">
+                <div class="main-info">
+                    <h1 class="category-title">Moslem Fashion</h1> 
+                    <p class="category-desc">Koleksi <a href="https://atid.me/go/1uWiMkw4" target="_blank">Busana Muslimah</a>, Batik Couple, serta Tas Wanita eksklusif dengan desain modern.</p>
+                    
+                    <a href="https://atid.me/go/XX5PKn2r" class="btn-label" target="_blank">Hijab • Gamis • Pasmina</a>
+                    <div class="img-frame">
+                        <a href="https://shopee.clicx.my.id"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMYSj550erIGMgVZtaHxnHQ-h7zv7IwNAWmZ1XNRxxTfVp1Yi-rtFLUa9iGrpnpBY3S6CLoc1xa10GJgWOBDgeXTl4jaRJMUVKjcYHX6D6J5-tIcmyvtIy24PnzKNI2gaD6g0xlXG0oC6tgM56H6qbA5eCbRg40uqZ9QgYH2tIw3hwrA1Zwe2IMZgi/s1600/Hijab-Gamis-Pasmina.webp" alt="Koleksi Hijab dan Gamis" loading="lazy"></a>
+                    </div>
+                    <p class="category-caption">Temukan koleksi terbaik di <strong>Naia Official Shop</strong> dengan harga terjangkau.</p>
+                </div>
+
+                <div class="col-right">
+                    <div class="product-item">
+                        <a href="https://atid.me/go/coV1jjAm" class="btn-label">Batik Couple</a>
+                        <div class="img-frame">
+                            <a href="https://atid.me/go/fVOlX9gN"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGjN3TzyKmbT6swcDO1gMQPXfTfbPEAJrImbpBMkRW02cVVOKv7N3Gelvsn9SvSEqL6vsXvh6aHogSSkM5q-pOzfk6RJ14pL3PV9J8YnBvNQRSXXpjGj_Fursat0IEGODqp4-xUR2OQA04vKo7OApFraEgbSnNfExUCYiFddWnJIEzFWflyWSHh2a8/s1600/Batik-Couple.webp" alt="Batik Couple" loading="lazy"></a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="https://atid.me/go/b248GfCh" class="btn-label">Tas & Aksesories</a>
+                        <div class="img-frame">
+                            <a href="https://atid.me/go/VsrzQdiu"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVAzVLu_U-r12GcrfxqFytlVj7jph3TsREReahs5upLa7hVPH7f3zHSOxJgUvuLLll0NbhKRAwhdFM4frdl1IMJm0I0fwNXzI6JS9QJ5RAGgaM6zaTkoHgCKTA7ZQrhJzc9oW5zyGJpRp17ZuzKfmBr9TgvBylPly5gaGeWzeqmdcYgo0HxmtoCeoM/s1600/Tas%20Tangan%20Wanita.webp" alt="Tas Wanita" loading="lazy"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer-link">Lihat lainnya di: <a href="https://atid.me/0095ot002gfc" target="_blank">Shopee_Clicx.my.id</a></div>
+            </article>
+        </section>
+
+        <section>
+            <article class="balanced-grid">
+                <div class="main-info">
+                    <h2 class="category-title">Food & Beverage</h2> 
+                    <p class="category-desc">Tunjang gaya hidup sehat dengan <a href="https://atid.me/go/5QeIXmes" target="_blank">Herbal & Suplemen</a> serta camilan bergizi.</p>
+                    
+                    <a href="https://atid.me/go/JQmXSux2" class="btn-label">Herbal & Supplement</a>
+                    <div class="img-frame">
+                        <a href="https://atid.me/go/AaKdsmpm"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgH4n_PgZaNH4Eu8cdNDyltNY7f8zX0_29DDfxOrNu_5Yo8qyLQ07yTk2i5BjAVQ1rsT6R4rYYdn-B6qDlWZmJnS6kZICUnrWYC9r1R52JRk3khAcY27sKzR_Lov-BcNoFqP1M8fdGlPeRlX94P3c0Y7F47Qds24MtCjnTDyqSgudN9lXMbg93bLl8H/s1600/Herbal-Supplement.webp" alt="Herbal Supplement" loading="lazy"></a>
+                    </div>
+                </div>
+
+                <div class="col-right">
+                    <div class="product-item">
+                        <a href="https://atid.me/go/lQOX3cqm" class="btn-label">Kurma & Madu</a>
+                        <div class="img-frame">
+                            <a href="https://atid.me/go/1Kwj4mn6"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcwCnGDqIeh4h20TWKZKIS0b22dsWSxDQeH-GDpe49IQybYD_PmlE3n9iqCZNyVD8w9HOjGxcRmF6lMzVsfcozUYR3JxtBVId4xIWMIs7tofOyUeey9uwyMNWvbcYfHD8BogGI29Vp90bdhoiRrlMdGF9QWeygiKJ_jo5aIZvInqK-0NWU4C6MXVV2/s1600/Kurma-Madu.webp" alt="Kurma dan Madu" loading="lazy"></a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="https://atid.me/go/gAXnhglI" class="btn-label">Camilan Sehat</a>
+                        <div class="img-frame">
+                            <a href="https://atid.me/go/2TzQXO2R"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNvIf2b4vvwecYArQWEX_t4xJIR_pxwCBOyx7Kz_-cRhBWWzvACJ7SWv_6ug7hmth3QwH5mpNy-7Z6MtDEL1_CzyBhGBl07RRGNX-ioEDR-gvq-Up1fFrlj7_1mRq-xVlSwZbFTYdWJSGjnyOOYOTySASFdRSlmoxDS-M48WbUUq2KCPuJsjuYoRkN/s1600/Camilan%20sehat.webp" alt="Camilan Sehat" loading="lazy"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer-link">Eksplor Rasa: <a href="https://atid.me/0095ot002gfc" target="_blank">Shopee_Clicx.my.id</a></div>
+            </article>
+        </section>
+
+        <section>
+            <article class="balanced-grid">
+                <div class="main-info">
+                    <h2 class="category-title">Home Appliance</h2> 
+                    <p class="category-desc">Lengkapi rumah Anda dengan <a href="https://atid.me/go/wDi3TzsL" target="_blank">Perangkat Rumah Tangga</a> berkualitas untuk kenyamanan ekstra.</p>
+                    
+                    <a href="https://atid.me/go/24P6ZDiO" class="btn-label">Kitchen Appliance</a>
+                    <div class="img-frame">
+                        <a href="https://atid.me/go/M7NARuPr"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQquB5inTa3dz8TxdO71mkqwL0bI515LuHA8CGVzGFKo-ZkHNo-ZBpqBbkHym00D7ds9Crl3QWxCQdQueAPzF1ohGi5Ro431T-G5h2OXVs2vQTqNjW1jdFeZ1B7nIZcsmzamcxTPtaDsc2DtXb13Pas_iX1sgtS9D3MTPKCg61cMr8hFOKdtCWbplo/s1600/Home%20Appliance.webp" alt="Peralatan Dapur" loading="lazy"></a>
+                    </div>
+                </div>
+
+                <div class="col-right">
+                    <div class="product-item">
+                        <a href="https://atid.me/go/eadfe9w2" class="btn-label">Bathroom Appliance</a>
+                        <div class="img-frame">
+                            <a href="https://atid.me/go/Ga5e8jQv"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIqDdxc488soRrD2HaTcXuYIffEwLhct8YuyGRalGgrzQR63QAz02RGyVp-ylOwDSdvLGZkvv85BEr7Xet4ngtFbCBU376WC8zkFSpFfJgPZOR91i5CZ_rP522mNaLN-SMF323w2e7BFx6Sx65T-MMq8pdT7jW1eTGeUobecUqNj0TvT4m4noGXtku/s1600/Bathroom%20Appliance.webp" alt="Perlengkapan Kamar Mandi" loading="lazy"></a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="https://atid.me/go/2FPoUazP" class="btn-label">Home Decoration</a>
+                        <div class="img-frame">
+                            <a href="https://atid.me/go/fC0UWMoI"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtzQr4PICl_zpu5S2NzYFl0pArjqwC3mHger_FySs6fQNr69PisOuzfcYJPhzsvnbB3Trkp58LLwGDioHPGvtqyjCpsiJJc8n5HLYrGXha_la29_vaNDb3wxtjo-2ukvJTqfKWWKSkWG-XAhDojrc5jgmKs6h5X13Hpyf8M5dPkM7hRVJ-xDKkGP2Y/s1600/Home%20decoration.webp" alt="Dekorasi Rumah" loading="lazy"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer-link">Info Produk: <a href="https://atid.me/0095ot002gfc" target="_blank">Shopee_Clicx.my.id</a></div>
+            </article>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 <strong>ShopeeClicx.my.id</strong><br>Fashion • F&B • Home Appliance<br>All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <button onclick="topFunction()" id="backToTop" title="Kembali ke Atas"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+        let mybutton = document.getElementById("backToTop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+        function topFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
